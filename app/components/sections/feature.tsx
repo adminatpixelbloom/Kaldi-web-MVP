@@ -18,7 +18,7 @@ function Feature() {
 
   return (
     <section className="mx-auto max-w-5xl flex items-center px-16 py-32">
-      <div className="bg-amber-100 p-6 w-3/2 z-10 dark:bg-amber-950">
+      <div className="bg-[var(--color-primary)] p-6 w-3/2 z-10 dark:bg-amber-950">
         <h2>{(data as FeatureText).h2}</h2>
         <p>{(data as FeatureText).p}</p>
       </div>
