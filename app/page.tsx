@@ -4,6 +4,7 @@ import Hero from "./components/sections/hero";
 import Ratings from "./components/sections/ratings";
 import Feature from "./components/sections/feature";
 import InstagramGallery from "./components/sections/insstagramGallery";
+import Hours from "./components/sections/hours";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           <Ratings />
         </section>
         <Feature />
+        <Hours />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
     </div>
