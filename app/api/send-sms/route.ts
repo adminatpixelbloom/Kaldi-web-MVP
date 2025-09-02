@@ -2,13 +2,15 @@ import { NextResponse } from "next/server";
 import twilio from "twilio";
 
 export async function POST(req: Request) {
-  const { phone, message } = await req.json();
+  const { name, phone, email, message } = await req.json();
 
   const client = twilio(process.env.TWILIO_SID, process.env.TWILIO_AUTH);
 
   try {
     await client.messages.create({
-      body: `Message from ${phone}` + message,
+      body:
+        `Zpráva od ${name}, z telefonu ${phone}, nebo emailu ${email}:\n ` +
+        message,
       from: process.env.TWILIO_PHONE, // tvoje Twilio číslo
       to: "+420603973654",
     });
