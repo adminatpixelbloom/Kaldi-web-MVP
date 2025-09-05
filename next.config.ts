@@ -10,12 +10,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "scontent.cdninstagram.com",
+        hostname: "*.cdninstagram.com", // <-- wildcard for all Instagram CDNs
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "instagram.fprg6-1.fna.fbcdn.net",
+        hostname: "*.fna.fbcdn.net", // <-- wildcard for FB/Instagram fallback
         pathname: "/**",
       },
     ],
