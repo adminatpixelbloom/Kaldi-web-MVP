@@ -4,7 +4,7 @@ import Image from "next/image";
 import useSWR from "swr";
 
 const fetcher = (url: string) =>
-  fetch(url, { next: { revalidate: 3 } }).then((res) => res.json());
+  fetch(url, { next: { revalidate: 3000 } }).then((res) => res.json());
 
 interface GoogleMapsReview {
   profile_photo_url: string;
