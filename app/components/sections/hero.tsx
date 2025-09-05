@@ -5,22 +5,26 @@ import logo from "@/assets/Logo-Kaldi-negative.svg";
 
 function Hero() {
   return (
-    <>
-      <div className="absolute flex flex-col items-center z-10   h-3/4 mt-28">
+    <section id="hero-section" className="relative">
+      <Image
+        src={heroImage}
+        width={2048}
+        height={2048}
+        alt="Čokoládový dort"
+        className="relative min-h-96 max-h-screen object-cover"
+      />
+      <div
+        id="logo-and-text"
+        className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center"
+      >
         <Image src={logo} width={150} height={150} alt="logo" />
-        <h1 className="mt-4 text-white text-shadow-lg">Prostě dobrá kavárna</h1>
+        <h1 className="w-auto md:w-1/2 text-center text-white text-shadow-lg">
+          Prostě dobrá kavárna
+        </h1>
       </div>
-      <div className="relative w-full">
-        <div className="absolute h-full bg-black opacity-20"></div>
-        <Image
-          src={heroImage}
-          width={2048}
-          height={2048}
-          alt="Čokoládový dort"
-          // className="w-full max-h-[80vh]"
-        />
-      </div>
-    </>
+      <div className="absolute h-screen w-screen bg-black opacity-20"></div>
+      <div className=""></div>
+    </section>
   );
 }
 
