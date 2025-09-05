@@ -42,7 +42,7 @@ export default function InstagramGallery() {
   // media_type is checked per post below
 
   return (
-    <div className="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2">
+    <div className="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2 px-24">
       {data.data.map((post: InstagramPost, i: number) => (
         <a
           key={post.id}
@@ -61,7 +61,7 @@ export default function InstagramGallery() {
               height={500}
             />
           )}
-          {/* iframes */}
+          {/* iframes were autoplaying all together TODO: make this functioning */}
           {/* {post.media_type === "VIDEO" && (
             <iframe
               allowFullScreen

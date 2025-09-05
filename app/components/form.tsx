@@ -31,7 +31,7 @@ export default function Form() {
   };
 
   return (
-    <>
+    <div className="my-12">
       {success && (
         <AnimatePresence>
           <motion.div
@@ -69,10 +69,10 @@ export default function Form() {
           placeholder="Zpráva"
           className="border p-2 rounded"
         />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+        <button type="submit" className="bg-red-700 text-white p-2 rounded">
           Odeslat SMS
         </button>
       </form>
-    </>
+    </div>
   );
 }

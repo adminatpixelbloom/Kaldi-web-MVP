@@ -27,11 +27,11 @@ function Ratings() {
 
   return (
     <>
-      <div className="grid gap-4">
+      <div className="flex flex-wrap items-center gap-4 my-12">
         {reviews.map((r: GoogleMapsReview, i: number) => (
           <article
             key={i}
-            className="flex gap-6 p-4 bg-amber-100 dark:bg-amber-700 rounded shadow"
+            className="mx-auto max-w-64 gap-6 p-4 bg-amber-100 dark:bg-amber-700 rounded shadow"
           >
             <div className="min-w-16 max-w-16">
               <Image
