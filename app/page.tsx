@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Navbar from "./components/navbar";
 import Hero from "./components/sections/hero";
 import Ratings from "./components/sections/ratings";
 import Feature from "./components/sections/feature";
-import InstagramGallery from "./components/sections/insstagramGallery";
+import InstagramGallery from "./components/sections/instagramGallery";
 import Hours from "./components/sections/hours";
 import Contact from "./components/sections/contact";
 
@@ -14,10 +13,9 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <Hero />
         <Feature />
-        <section className="w-full max-w-5xl px-4 py-12">
-          <InstagramGallery />
-          <Ratings />
-        </section>
+        <InstagramGallery />
+        <Ratings />
+        {/* <section className="relative w-full max-w-5xl px-4 py-12"></section> */}
         <Hours />
         <Contact />
       </main>

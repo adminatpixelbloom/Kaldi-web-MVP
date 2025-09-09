@@ -42,13 +42,16 @@ export default function InstagramGallery() {
   // media_type is checked per post below
 
   return (
-    <div className="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2 px-24">
+    <section
+      id="instagram-feed"
+      className="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2 px-24"
+    >
       {data.data.map((post: InstagramPost, i: number) => (
         <a
           key={post.id}
           href={post.permalink}
           target="_blank"
-          className={`relative overflow-hidden rounded-xl ${
+          className={`overflow-hidden rounded-xl ${
             layout[i % layout.length] // pattern se opakuje
           }`}
         >
@@ -74,6 +77,6 @@ export default function InstagramGallery() {
           )} */}
         </a>
       ))}
-    </div>
+    </section>
   );
 }
